@@ -1,0 +1,26 @@
+body {
+    background-color: LightYellow;
+}
+
+#spodajDesno{
+position: fixed;
+bottom: 0px;
+right: 0px;
+
+}
+
+
+.stirjestolpci{
+
+    position:relative;
+    color:white;
+    background-color: darkred;
+    top: 50px;
+    height: 100px;
+
+}
+
+.img{
+    position: relative;
+    top:200px;
+}
