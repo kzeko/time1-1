@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block vsebina %}
+<p>
+    <h1>Seznam opravil</h1>
+
+<br>
+<table border="1">
+<tbody>
+<tr>
+<td >ID opravila</td>
+<td >Zadeva opravila</td>
+    <td >Dodaten opis</td>
+</tr>
+{% for opravila in seznam %}
+<tr>
+<td><a href="/opravilo/{{ opravila.key.id() }}">{{ opravila.key.id() }} </a></td>
+      <td>{{opravila.zadeva_opravila}}</td>
+    <td>{{ opravila.dodaten_opis }}</td>
+</tr>{% endfor %}
+</tbody>
+</table>
+<br>
+
+</p>
+
+
+{% endblock vsebina %}
