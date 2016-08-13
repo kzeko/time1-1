@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
 {% block vsebina %}
-<p>
-    <h1>Seznam opravil</h1>
+    <h1>Seznam aktivnih opravil</h1>
 
 <br>
 <table border="1">
@@ -27,13 +26,10 @@
     <td>{{ opravila.nastanek }}</td>
     <td>{{ opravila.izbrisano }}</td>
 
-    <td><button>Neaktiven gumb</button></td>
+    <td><button>neaktiven gumb</button></td>
 </tr>{% endfor %}
 </tbody>
 </table>
 <br>
-
-</p>
-
 
 {% endblock vsebina %}

@@ -15,6 +15,7 @@
 
 
 </head>
+{% if loggedin and logged_rights %}
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -32,8 +33,10 @@
             <li><a href="/">Home</a></li>
             <li><a href="/stoparca">Štoparca</a></li>
             <li><a href="/trenutnicas">Trenutni čas</a></li>
-              <li><a href="/opravila">opravila</a></li>
-              <li><a href="/seznam_opravil">Seznam opravil</a></li>
+              <li><a href="/opravila">Novo opravila</a></li>
+              <li><a href="/seznam_aktivnih_opravil">Aktivna opravila</a></li>
+              <li><a href="/seznam_opravil">Vsa opravila</a></li>
+              <li><a href="{{ logout_url }}">ODJAVA</a></li>
 
           </ul>
         </div><!--/.nav-collapse -->
@@ -64,6 +67,14 @@
 </div>
   </div>
 </footer>
+
+{% else %}
+
+Niste prijavljeni ali nimate pravic.
+<br>
+     <a href="{{ login_url }}">PRIJAVA</a>
+{% endif %}
+
 
 </body>
 </html>

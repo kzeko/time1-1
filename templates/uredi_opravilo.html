@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block vsebina %}
+
+<form action="/opravilo/{{opravilo.key.id()}}/uredi" method="post">
+    <input name="uredi_zadeva_opravila" value="{{ opravilo.zadeva_opravila }}">
+    <input name="uredi_dodaten_opis" value="{{ opravilo.dodaten_opis }}">
+<button type="submit">Potrdi</button>
+
+</form>
+
+
+{% endblock vsebina %}

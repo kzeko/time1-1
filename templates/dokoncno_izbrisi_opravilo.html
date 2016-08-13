@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block vsebina %}
+
+<h1>Ali res želite trajno izbrisati opravilo?</h1>
+
+<form action="/opravilo/{{opravilo.key.id()}}/dokoncno_izbrisi" method="post">
+<button type="submit">Da, trajno izbriši! </button></form>
+{% endblock vsebina %}

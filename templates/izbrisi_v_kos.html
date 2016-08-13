@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block vsebina %}
+
+<h1>Ali želite opravilo premakniti v koš?</h1>
+
+<form action="/opravilo/{{opravilo.key.id()}}/izbrisi_v_kos" method="post">
+<button type="submit">V Koš!</button></form>
+{% endblock vsebina %}

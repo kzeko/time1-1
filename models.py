@@ -6,3 +6,5 @@ class Opravila(ndb.Model):
     dokoncano = ndb.BooleanProperty(default=False)
     tedenska_prioriteta = ndb.IntegerProperty()
     dodaten_opis = ndb.TextProperty()
+    tag = ndb.StringProperty()
+    izbrisano = ndb.BooleanProperty(default=False)
